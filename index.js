@@ -11,7 +11,7 @@ const path = require('path')
 
 app.use(cors({
 
-    origin: ["https://deploy-mern-lwhq.vercel.app"],
+    origin: ["https://fornt-end-vbyj.vercel.app"],
     methods:["POST","GET"],
     credential: true
 
