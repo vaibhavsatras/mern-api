@@ -31,7 +31,7 @@ const ProductList = (req,resp)=>{
     
     Products.then((data)=>{
 
-        return data
+        return resp.json(data)
 
     })
 
