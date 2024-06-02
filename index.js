@@ -9,13 +9,23 @@ const PORT = 5000
 const path = require('path')
 
 
-app.use(cors());
+app.use(cors({
+
+    origin: ["https://deploy-mern-lwhq.vercel.app"],
+    methods:["POST","GET"],
+    credential: true
+
+}));
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.resolve('./public')))
 
+app.get('/',(req,resp)=>{
 
+        resp.send('Hello Vaibhav')
+
+})
 app.use('/user',router);
 app.use('/product',productRoute)
 
